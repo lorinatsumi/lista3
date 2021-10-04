@@ -1,4 +1,4 @@
-#Faça um algoritmo para ler uma lista de 5 números. Após isto, ler mais um número qualquer, calcular e escrever quantas vezes esse número aparece na lista.
+#Leia 5 números em uma lista. A seguir encontre o maior número digitado, apresentando para o usuário este número e a posição que ele se encontra na lista.
 
 
 numeros = []
@@ -7,14 +7,14 @@ for i in range(5):
   numero=input("Digite um numero: ")
   numeros.append(numero)
 
-num = input("Digite um numero qualquer: ")
+indice = 0
+maior = numeros[0]
 
-print(numeros)
-
-quant = numeros.count(num)
-
-
-print (f"O valor {num} aparece {quant} vezes na lista")
-
+for i in range(5):
+  if maior < numeros[i]:
+    maior = numeros [i]
+    indice = i
 
 
+print ("O maior número é: " + str(maior))
+print (f"Está na posição: {indice}")

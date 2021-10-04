@@ -7,19 +7,14 @@ for i in range(5):
   numero=input("Digite um numero: ")
   numeros.append(numero)
 
-
+indice = 0
 maior = numeros[0]
 
-if maior < numeros[1]:
-  maior = numeros [1]
+for i in range(5):
+  if maior < numeros[i]:
+    maior = numeros [i]
+    indice = i
 
-if maior < numeros[2]:
-  maior = numeros[2]
-
-if maior < numeros[3]:
-  maior = numeros[3]
-
-if maior < numeros[4]:
-  maior = numeros[4]
 
 print ("O maior número é: " + str(maior))
+print (f"Está na posição: {indice}")
